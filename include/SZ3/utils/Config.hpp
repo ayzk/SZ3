@@ -269,7 +269,7 @@ namespace SZ {
         int quantbinCnt = 65536;
         int blockSize;
         int exhaustiveTuning=0;
-        int testLorenzo=1;
+        int testLorenzo=0;
         std::vector<int> quant_bins;
         //double pred_square_error;
         double decomp_square_error;

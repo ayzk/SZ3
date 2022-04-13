@@ -38,6 +38,7 @@ namespace SZ {
                 //std::vector<int>().swap(conf.quant_inds);
                 //conf.quant_inds=quant_inds;
                 uchar *buffer = new uchar[1];
+                buffer[0]=0;
                 return buffer;
 
             }
@@ -70,7 +71,7 @@ namespace SZ {
         }
         uchar *encoding_lossless(size_t &compressed_size){
           
-            size_t bufferSize = 3 * quant_inds.size()*sizeof(T);
+            size_t bufferSize = 1.5 * quant_inds.size()*sizeof(T);//original is 3
             uchar *buffer = new uchar[bufferSize];
             uchar *buffer_pos = buffer;
 
