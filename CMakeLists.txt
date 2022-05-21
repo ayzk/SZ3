@@ -18,7 +18,7 @@ endif()
 find_package(PkgConfig)
 find_package(OpenMP)
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/include/SZ3/version.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/include/SZ3/version.hpp)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/include/QoZ/version.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/include/QoZ/version.hpp)
 
 add_library(${PROJECT_NAME} INTERFACE)
 target_include_directories(
@@ -64,7 +64,7 @@ install(TARGETS ${PROJECT_NAME}
   INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
   )
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
-install(EXPORT QoZTargets NAMESPACE SZ3:: DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/QoZ)
+install(EXPORT QoZTargets NAMESPACE QoZ:: DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/QoZ)
 include(CMakePackageConfigHelpers)
 configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/QoZConfig.cmake.in
   "${CMAKE_CURRENT_BINARY_DIR}/QoZConfig.cmake"

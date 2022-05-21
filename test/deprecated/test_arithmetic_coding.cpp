@@ -11,8 +11,8 @@
 #include <cstdlib>
 #include <cstring>
 #include <sys/time.h>
-#include "SZ3/encoder/ArithmeticEncoder.hpp"
-#include "SZ3/utils/FileUtil.hpp"
+#include "QoZ/encoder/ArithmeticEncoder.hpp"
+#include "QoZ/utils/FileUtil.hpp"
 
 unsigned char *readByteData(char *srcFilePath, size_t *byteLength, int *status) {
     FILE *pFile = fopen(srcFilePath, "rb");
@@ -50,7 +50,7 @@ void writeByteData(unsigned char *bytes, size_t byteLength, char *tgtFilePath, i
     *status = 0;
 }
 
-using namespace SZ;
+using namespace QoZ;
 
 int main(int argc, char *argv[]) {
     int status = 0;
